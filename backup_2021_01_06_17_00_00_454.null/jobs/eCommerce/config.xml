@@ -1,0 +1,51 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Runs C:\Dev Stuff\cypress\cypress\integration\myCypress\eCommerce\eCommerce.spec.js&#xd;
+&#xd;
+Build Params:  eCommerce (mapped to a command in C:\Dev Stuff\cypress\package.json)&#xd;
+                       eCommerceHL (mapped to a command in C:\Dev Stuff\cypress\package.json)&#xd;
+&#xd;
+Had to install C:\Program Files\Git\bin\sh.exe and add to &apos;Path&apos; Environmental Variable&#xd;
+Also had to create &apos;CYPRESS_RUN_BINARY&apos; Environmental Variable and point to &apos;C:\Users\Dom\AppData\Local\Cypress\Cache\6.1.0\Cypress\Cypress.exe&apos;</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>Script</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>eCommerce</string>
+              <string>eCommerceHL</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>C:\Dev Stuff\cypress\cypress\integration\myCypress\eCommerce\</customWorkspace>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>npm run &quot;$Script&quot;</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.git.GitPublisher plugin="git@4.5.0">
+      <configVersion>2</configVersion>
+      <pushMerge>false</pushMerge>
+      <pushOnlyIfSuccess>false</pushOnlyIfSuccess>
+      <forcePush>false</forcePush>
+    </hudson.plugins.git.GitPublisher>
+  </publishers>
+  <buildWrappers/>
+</project>
